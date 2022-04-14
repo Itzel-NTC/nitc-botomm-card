@@ -1,0 +1,195 @@
+:root{
+
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    --Name-stats-Font-size: 18px;
+    }
+    
+    html,
+    body {
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Outfit', sans-serif;
+        height: 100vh;
+        display: block;
+    }
+    body{
+        background: var(--Very-dark-blue-main);
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container{
+        margin: 30px;
+        height: 50px;
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+    }
+    .button{
+        width: 150px;
+        border-radius: 8px;
+        border:2px solid currentColor;
+        font-size: var(--name_and_stats_Font_size);
+        font-weight: 600;
+        color: var(--Soft_blue);
+    }
+    .button:hover{
+        color:var(--White);
+        box-shadow: 0px 0px 8px 8px var(--cyan);
+    }
+    .button:disabled{
+        opacity: 0.5;
+    }
+
+
+    .card{
+        background: var(--Very-dark-blue-card);
+        border-radius: 20px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    .card-top{
+        size: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .card-top img{
+        height: 280px;
+        border-radius: 4%;
+        margin-top: 20px;
+    }
+    
+    .card-bottom-contexto {
+        display: inline-block;
+        flex-direction: column;
+        margin-left: 20px;
+        padding-left: 20px;
+        font-weight: 600;
+        margin: 0;
+        font-size: 22px;
+        color:hsl(0, 0%, 100%);
+    }
+    
+    .card-bottom-contexto p:nth-child(1):hover{
+    color:hsl(178, 100%, 50%);
+    }
+    
+    .card-bottom-contexto p:nth-child(2), p:nth-child(3) {
+        color: var(--Soft-blue);
+        font-size: 16px;
+    }
+    
+    .card-bottom-contexto p:nth-child(2){
+        margin-bottom: 0;
+    }
+    
+    .card-bottom-contexto p:nth-child(3){
+        margin-bottom: 0;
+        margin-top: 8px;
+    }
+    
+    .card-bottom-info{
+        display: flex;
+        height: 60px;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+    
+        margin-bottom: -2px;
+    }
+    
+    .card-bottom-info div:nth-child(1){
+        font-size: var(--Name-stats-Font-size);
+        color: var(--Cyan);
+        font-weight: 400;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .card-bottom-info div:nth-child(1) > img{
+        margin-right: 6px;
+    }
+    
+    .card-bottom-info div:nth-child(2){
+        color: var(--Soft-blue);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+    }
+    
+    .card-bottom-info div:nth-child(2) > img{
+        margin-right: 6px;
+    }
+    
+    .card-bottom-creation{
+        height: 50px;
+        margin-left: 20px;
+        align-items: center;
+        display: flex;
+        color:hsl(215, 51%, 70%);
+    }
+    
+    .card-bottom-creation img{
+        border-radius: 50%;
+        border: 1px solid white;
+        height: 28px;
+        margin-right: 14px;
+    }
+    
+    .card-bottom-creation  p span{
+        color: var(--White);
+        font-weight: 300;
+    }
+    
+    .card-bottom-creation p span:hover{
+        color: hsl(178, 100%, 50%);
+        opacity: 0.5;
+    }
+    .image{
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+    }
+    .image img{
+        width: 100%;
+        display: block;
+    }
+    
+    .image:hover .icon{
+        display: block;
+    }
+    
+    .icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:hsl(178, 100%, 50%);
+        display: none;
+    }
+    
+    .icon img{
+        position: absolute;
+        width: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
