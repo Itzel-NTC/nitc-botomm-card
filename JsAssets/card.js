@@ -1,103 +1,92 @@
 export function createCard(item){
+    
+    const container=document.createElement('div')
+    container.className="Container"
+    
+    const ContainerTop=document.createElement('div')
+    ContainerTop.className="Container-CardTop"
+    container.appendChild(ContainerTop)
+    
+    const MainImage=document.createElement('img')
+    MainImage.src=item.image_NFT
+    MainImage.alt="NFT image"
+    ContainerTop.appendChild(MainImage)
+    
+    const CardTop=document.createElement('div')
+    CardTop.className="CardTop"
+    ContainerTop.appendChild(CardTop)
+    
+    const ViewNFT=document.createElement('img')
+    ViewNFT.src=item.ViewImage
+    ViewNFT.alt="NFT image view"
+    CardTop.appendChild(ViewNFT)
+    
+    const CardBottom=document.createElement('div')
+    CardBottom.className="CardBottom"
+    container.appendChild(CardBottom)
+    
+    const DescriptionCard=document.createElement('div')
+    DescriptionCard.className="description-g"
+    CardBottom.appendChild(DescriptionCard)
+    
+    const title=document.createElement('p')
+    title.textContent=item.title
+    DescriptionCard.appendChild(title)
+    
+    const description1 = document.createElement('p')
+    description1.textContent=item.description1
+    DescriptionCard.appendChild(description1)
+    
+    const description2 = document.createElement('p')
+    description2.textContent=item.description2
+    DescriptionCard.appendChild(description2)
+    
+    const DescripcionNFT=document.createElement('div')
+    DescripcionNFT.className="description-e"
+    CardBottom.appendChild(DescripcionNFT)
+    
+    const eth=document.createElement('div')
+    eth.className="eth"
+    DescripcionNFT.appendChild(eth)
+    
+    const ethereum_icon=document.createElement('img')
+    ethereum_icon.src=item.ethereum_icon
+    ethereum_icon.alt="ethereum-icon"
+    eth.appendChild(ethereum_icon)
+    
+    const cost=document.createElement('span')
+    cost.textContent=item.cost
+    eth.appendChild(cost)
+    
+    const TimeLeft=document.createElement('div')
+    TimeLeft.className="timeLeft"
+    DescripcionNFT.appendChild(TimeLeft)
+    
+    const clock_icon=document.createElement('img')
+    clock_icon.src=item.clock_icon
+    clock_icon.alt="clock icon"
+    TimeLeft.appendChild(clock_icon)
+    
+    const time=document.createElement('span')
+    time.textContent=item.time
+    TimeLeft.appendChild(time)
+    
+    const AutoNFT = document.createElement('div')
+    AutoNFT.className="autor"
+    CardBottom.appendChild(AutoNFT)
+    
+    const avatar_image=document.createElement('img')
+    avatar_image.src=item.avatar_image
+    avatar_image.alt="avatar image"
+    AutoNFT.appendChild(avatar_image)
+    
+    const creation=document.createElement('p')
+    creation.textContent=item.creation
+    AutoNFT.appendChild(creation)
+    
+    const autor=document.createElement('span')
+    autor.textContent=item.autor
+    creation.appendChild(autor)
 
-const card = document.createElement(`div`)
-card.className="card"
-// app.appendChild(Card)
- // console.log(Card)
-
-const CardTop = document.createElement(`div`)
-CardTop.className="card-top"
-card.appendChild(CardTop)
- // console.log(CardTop)
-
-const imageclass = document.createElement(`div`)
-imageclass.className="image"
-CardTop.appendChild(imageclass)
-
-const imagen = document.createElement(`img`)
-imagen.src=`./assets/image-equilibrium.jpg`
-imageclass.appendChild(imagen)
-
-
-const app = document.querySelector(`#app`)
-app.appendChild(card)
-
-
-
-const iconclass = document.createElement(`div`)
-iconclass.className="icon"
-imageclass.appendChild(iconclass)
-
-const imaicon = document.createElement(`img`)
-imaicon.src=`./assets/icon-view.svg`
-iconclass.appendChild(imaicon)
-
-const cardbot = document.createElement(`div`)
-cardbot.className="card-bottom"
-card.appendChild(cardbot)
-
-const cardbotcon = document.createElement(`div`)
-cardbotcon.className="card-bottom-contexto"
-cardbot.appendChild(cardbotcon)
-
- const equilibr = document.createElement(`p`)
- equilibr.textContent=item.equilibr
- cardbotcon.appendChild(equilibr)
-
- const our = document.createElement(`p`)
- our.textContent=item.our
-cardbotcon.appendChild(our)
-
- const balance = document.createElement(`p`)
- balance.textContent=item.balance
-cardbotcon.appendChild(balance)
-
-const cardbotin = document.createElement(`div`)
-cardbotin.className="card-bottom-info"
-cardbot.appendChild(cardbotin)
-
-const ether = document.createElement(`div`)
-ether.className="ether-card"
-cardbotin.appendChild(ether)
-
-const etheric = document.createElement(`img`)
-etheric.src=`./assets/icon-ethereum.svg`
-ether.appendChild(etheric)
-
-const et = document.createElement(`span`)
-et.textContent=item.et
-ether.appendChild(et)
-
-const clock = document.createElement(`div`)
-clock.className="clock-card"
-cardbotin.appendChild(clock)
-
-const imclock = document.createElement(`img`)
-imclock.src=`./assets/icon-clock.svg`
-imclock.alt=`clock image`
-clock.appendChild(imclock)
-
-const days = document.createElement(`span`)
- days.textContent=item.days
- clock.appendChild(days)
-
- const creation = document.createElement(`div`)
- creation.className="card-bottom-creation"
- cardbot.appendChild(creation)
- 
- const avatar = document.createElement(`img`)
-avatar.src=`./assets/image-avatar.png`
-avatar.alt=`avatar image`
-creation.appendChild(avatar)
-
-const crea = document.createElement(`p`)
-crea.textContent=item.crea
- creation.appendChild(crea)
-
-const jule = document.createElement(`span`)
-jule.textContent=item.jule
-creation.appendChild(jule)
-
-
- return card
+    return container
 }

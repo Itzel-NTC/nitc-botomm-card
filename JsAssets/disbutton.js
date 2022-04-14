@@ -1,7 +1,8 @@
 export function buttonDisabled(quantity){
     const btnAddCard=document.querySelector("#addNFTCard")
     const btnRemoveCard=document.querySelector("#removeNFTCard")
-
+    
+    
     if(quantity>=10){
         btnAddCard.setAttribute("disabled","")
     }else{
@@ -11,5 +12,6 @@ export function buttonDisabled(quantity){
             btnAddCard.removeAttribute("disabled")
             btnRemoveCard.removeAttribute("disabled","true")
         }
+
     }
 }

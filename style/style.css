@@ -1,195 +1,177 @@
 :root{
-
-    --Very-dark-blue-main: hsl(217, 54%, 11%);
-    --Very-dark-blue-card: hsl(216, 50%, 16%);
-    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --Soft_blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --VeryDarkBlueMainBG: hsl(217, 54%, 11%);
+    --VeryDarkBlueCardBG: hsl(216, 50%, 16%);
+    --VeryDarkBlueLine: hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
-    
-    --Name-stats-Font-size: 18px;
-    }
-    
-    html,
-    body {
-        margin: 0px;
-        box-sizing: border-box;
-        font-family: 'Outfit', sans-serif;
-        height: 100vh;
-        display: block;
-    }
-    body{
-        background: var(--Very-dark-blue-main);
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-    }
+    --Font_Size : 16px;
+}
 
-    .container{
-        margin: 30px;
-        height: 50px;
-        display: flex;
-        align-content: center;
-        justify-content: space-around;
-    }
-    .button{
-        width: 150px;
-        border-radius: 8px;
-        border:2px solid currentColor;
-        font-size: var(--name_and_stats_Font_size);
-        font-weight: 600;
-        color: var(--Soft_blue);
-    }
-    .button:hover{
-        color:var(--White);
-        box-shadow: 0px 0px 8px 8px var(--cyan);
-    }
-    .button:disabled{
-        opacity: 0.5;
-    }
+html,body{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    display: block;
+}
+body{
+    background: var(--VeryDarkBlueMainBG);
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.button-container{
+    margin: 30px;
+    height: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.button{
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    border:2px solid pink;
+    font-size: var(--Font_Size);
+    font-weight: 600;
+    color: palevioletred;
+    background-color:var(--VeryDarkBlueLine);
+}
+.button:hover{
+    transition: color 0.4s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
+    color: palevioletred;
+    background-color: pink;
+    box-shadow: 0px 0px 5px 5px pink;
+}
+.button:disabled{
+    opacity: 0.5;
+}
+.Container{
+    border-radius: 8px;
+    position: relative;
+    width: 86%;
+    margin: 0 auto;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    background-color: var(--VeryDarkBlueCardBG);
+}
+.Container-CardTop{
+    height: 280px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+.Container-CardTop img{
+    border-radius: 8PX;
+    position: relative;
+    bottom: -25px;
+}
+.CardTop{
+    opacity: 0;
+    top: 25px;
+    background-color: hsl(178, 100%, 50%, 30%);
+    height: calc(100%);
+    width: 280px;
+    border-radius: 8px;
+    transition: opacity 0.4s ease-in-out;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -25px;
+}
+
+.CardTop:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.CardBottom{
+    width: 285px;
+    margin: 0 auto;
+}
+    
+.description-g p:nth-child(1){
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--White);
+}
+.description-g p:nth-child(1):hover{
+    transition: color 0.4s ease-in-out;
+    color: var(--cyan);
+}
+.description-g p:nth-child(2){
+    font-size: var(--Font_Size);
+    font-weight: 300;
+    color: var(--Soft_blue);
+    margin-bottom: 5px;
+}
 
 
-    .card{
-        background: var(--Very-dark-blue-card);
-        border-radius: 20px;
-        width: 85%;
-        margin: 0 auto;
-    }
-    
-    .card-top{
-        size: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        margin-bottom: 20px;
-    }
-    
-    .card-top img{
-        height: 280px;
-        border-radius: 4%;
-        margin-top: 20px;
-    }
-    
-    .card-bottom-contexto {
-        display: inline-block;
-        flex-direction: column;
-        margin-left: 20px;
-        padding-left: 20px;
-        font-weight: 600;
-        margin: 0;
-        font-size: 22px;
-        color:hsl(0, 0%, 100%);
-    }
-    
-    .card-bottom-contexto p:nth-child(1):hover{
-    color:hsl(178, 100%, 50%);
-    }
-    
-    .card-bottom-contexto p:nth-child(2), p:nth-child(3) {
-        color: var(--Soft-blue);
-        font-size: 16px;
-    }
-    
-    .card-bottom-contexto p:nth-child(2){
-        margin-bottom: 0;
-    }
-    
-    .card-bottom-contexto p:nth-child(3){
-        margin-bottom: 0;
-        margin-top: 8px;
-    }
-    
-    .card-bottom-info{
-        display: flex;
-        height: 60px;
-        align-items: center;
-        align-content: center;
-        justify-content: space-between;
-        margin-left: 20px;
-        margin-right: 20px;
-    
-        margin-bottom: -2px;
-    }
-    
-    .card-bottom-info div:nth-child(1){
-        font-size: var(--Name-stats-Font-size);
-        color: var(--Cyan);
-        font-weight: 400;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .card-bottom-info div:nth-child(1) > img{
-        margin-right: 6px;
-    }
-    
-    .card-bottom-info div:nth-child(2){
-        color: var(--Soft-blue);
-        font-weight: 400;
-        display: flex;
-        align-items: center;
-    }
-    
-    .card-bottom-info div:nth-child(2) > img{
-        margin-right: 6px;
-    }
-    
-    .card-bottom-creation{
-        height: 50px;
-        margin-left: 20px;
-        align-items: center;
-        display: flex;
-        color:hsl(215, 51%, 70%);
-    }
-    
-    .card-bottom-creation img{
-        border-radius: 50%;
-        border: 1px solid white;
-        height: 28px;
-        margin-right: 14px;
-    }
-    
-    .card-bottom-creation  p span{
-        color: var(--White);
-        font-weight: 300;
-    }
-    
-    .card-bottom-creation p span:hover{
-        color: hsl(178, 100%, 50%);
-        opacity: 0.5;
-    }
-    .image{
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-    }
-    .image img{
-        width: 100%;
-        display: block;
-    }
-    
-    .image:hover .icon{
-        display: block;
-    }
-    
-    .icon{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color:hsl(178, 100%, 50%);
-        display: none;
-    }
-    
-    .icon img{
-        position: absolute;
-        width: 60px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    
+
+.description-g p:nth-child(3){
+    font-size: var(--Font_Size);
+    font-weight: 300;
+    color: var(--Soft_blue);
+    margin-top: 0;
+}
+.description-e{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--VeryDarkBlueLine);
+    position: relative;
+}
+.eth span{
+    font-weight:400;
+    color: var(--cyan);
+    font-size: var(--Font_Size);
+    text-align: end;
+    position: relative;
+    margin: 0px 0px 0px 5px ;
+    bottom: 3px;
+}
+.timeLeft span{
+    font-weight:300;
+    color: var(--Soft_blue);
+    font-size: var(--Font_Size);
+    text-align: end;
+    position: relative;
+    margin: 0px 0px 0px 5px ;
+    bottom: 3px;
+}
+.autor{
+    height: 35px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
+    padding-bottom: 20px;
+}
+.autor img{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.autor p{
+    font-size: var(--Font_Size);
+    font-weight: 300;
+    color: var(--Soft_blue);
+    margin: auto 15px;
+}
+.autor span{
+    color: var(--White);
+    margin-left: 5px;
+}
+.autor span:hover{
+    transition: color 0.4s ease-in-out;
+    color: var(--cyan);
+}
